@@ -10,10 +10,14 @@ keymap.set("i", "jk", "<ESC>")
 
 -- ---------- 视觉模式 ---------- ---
 -- 单行或多行移动
-keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+-- keymap.set("v", "<C-s", ":m '>+1<CR>gv=gv")
+-- keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- x do not yank
 keymap.set("v", "x", "_x")
+-- p 替换为P用来保留粘贴板
+keymap.set("v", "p", "P")
+keymap.set("v", "J", "^")
+keymap.set("v", "K", "$")
 
 -- ---------- 正常模式 ---------- ---
 -- 全选
@@ -22,6 +26,9 @@ keymap.set("n", "vae", "ggVG")
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 -- 复制到下一行
 keymap.set("n", "<leader>p", "o<ESC>p")
+-- 移动到当前行首位置
+keymap.set("n", "J", "^")
+keymap.set("n", "K", "$")
 
 --  保存
 keymap.set({ "n", "i" }, "<C-s>", "<Esc>:w<cr>")

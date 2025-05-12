@@ -14,7 +14,6 @@ return {
 
       -- Actions
       map("n", "<leader>gr", ":Gitsigns reset_hunk<CR>")
-      map("v", "<leader>gr", ":Gitsigns reset_hunk<CR>")
       map("n", "<leader>gd", "<cmd>Gitsigns diffthis<CR>")
     end,
   },
